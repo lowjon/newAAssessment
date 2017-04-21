@@ -1,0 +1,11 @@
+.logo{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  right: 10px;
+  background-image: url('../img/devLogo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

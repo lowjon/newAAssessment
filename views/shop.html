@@ -6,6 +6,25 @@
 <div class="product-grid__item   grid__item one-half large--one-third" >
 
     <!--Repeat over your data and display it below -->
+    <div ng-repeat="product in products"class="product-grid__item  grid__item one-half large--one-third" >
 
-    
+        <!--Product Image-->
+        <!-- note how we pass params to the details view in the ui-sref  -->
+        <!-- also need to have $state and $state.params in the respective controller -->
+        <a ui-sref="details({id: product.id})" class="product-grid__product" >
+            <img  ng-src={{product.image}} class="product-grid__img" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+        </a>
+
+        <!--Product Meta-->
+        <div class="product-grid__meta">
+            <!-- Tittle-->
+            <h3 class="product-grid__name"><a ui-sref="details">{{product.title}}</a></h3>
+            <!--Product Description-->
+            <h4 class="product-grid__sub">{{product.desc}}</h4>
+
+            <!--Product Price-->
+            <div class="product-grid__price">{{product.price}}</div>
+        </div>
+    </div>
+
 </div>
